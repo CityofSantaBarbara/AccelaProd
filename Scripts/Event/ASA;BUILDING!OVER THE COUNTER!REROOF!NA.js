@@ -5,7 +5,7 @@
 removeAllFees(capId);
 
 var feeToAdd = [];
-var bigRoof = parseInt(AInfo["Roof Square Footage"]) >= 3000;
+var bigRoof = parseInt(AInfo["Roof Square Footage"]) >= 3001;
 
 // JHS assumes these are in order, most $$ to least $$
 

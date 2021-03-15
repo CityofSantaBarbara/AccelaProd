@@ -33,7 +33,7 @@ if ( (wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "CDBuildingCode@SantaBarbaraCa.gov";
                 var ccEmail = ""; //blank for now
@@ -63,7 +63,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "FirePrevention2@SantaBarbaraCA.gov";
                 var ccEmail = ""; //blank for now
@@ -97,7 +97,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-	        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+	        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "OHoodes@sbpd.com";
                 var ccEmail = ""; //blank for now
@@ -128,7 +128,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "PWCounter@SantaBarbaraCA.gov";
                 var ccEmail = ""; //blank for now
@@ -156,7 +156,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "specialevents@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now
@@ -182,7 +182,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "businesslicense@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now
@@ -209,7 +209,7 @@ if ((wfTask == "Application Submittal" && wfStatus == "Department Review") &&
         //activateTask("Comm Dev Bldg Safety");
         //logDebug("Department Notification email");
 		//Get Email Notification and Parameters
-        var fromEmail = "SBCityLDT_Train@santabarbaraca.gov";
+        var fromEmail = "SBCityLDT@santabarbaraca.gov";
                 //var toEmail = "jason@grayquarter.com";
                 var toEmail = "cbarrios@santabarbaraca.gov";
                 var ccEmail = ""; //blank for now

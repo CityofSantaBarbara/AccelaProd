@@ -1,37 +1,29 @@
 //ASIUA:BUILDING/OVER THE COUNTER/REROOF/NA
 //Set the Detail Description
-    var totPoints = "";
-  if (
-    AInfo[
-      "Like for Like TearOff and Replace Composition Roofing"
-    ] == "CHECKED"
-    ) {
+var totPoints = "";
+if (
+  AInfo["Re-Roof Types"] == "Like for Like"
+  ) {
+  if(totPoints != '') totPoints+= '& ';
+  totPoints = totPoints + "Like for Like Tear-Off and Replace Composition Roofing ";
+  } if (
+    AInfo["Re-Roof Types"] == "Remove & Reset Tile Over New Weather Barrier"
+  ) {
     if(totPoints != '') totPoints+= '& ';
-    totPoints = totPoints + "Like for Like Tear-Off and Replace Composition Roofing ";
-    } if (
-    AInfo[
-      "Like for Like Remove and Re-Set Tile Roofing"
-    ] == "CHECKED"
-    ) {
-      if(totPoints != '') totPoints+= '& ';
-    totPoints = totPoints + "Like for Like Remove & Re-Set Tile Roofing ";
-    }
-   if (
-    AInfo[
-      "Like for Like Composition Overlay Roofing"
-    ] == "CHECKED"
-    ) {
-      if(totPoints != '') totPoints+= '& ';
-    totPoints = totPoints + "Like for Like Composition Overlay Roofing ";
-    }
-   if (
-    AInfo[
-      "Like for Like Certified PVC Cool Roofing"
-    ] == "CHECKED"
-    ) {
-      if(totPoints != '') totPoints+= '& ';
-    totPoints = totPoints + "Like-for-Like Color - Certified Cool Roof ";
-    }
-    
+  totPoints = totPoints + "Like for Like Remove & Re-Set Tile Roofing ";
+  }
+ if (
+  AInfo["Re-Roof Types"] == "Overlay Like for Like"
+  ) {
+    if(totPoints != '') totPoints+= '& ';
+  totPoints = totPoints + "Like for Like Composition Overlay Roofing ";
+  }
+ if (
+  AInfo["Re-Roof Types"] == "Certified PVC Cool Roof"
+  ) {
+    if(totPoints != '') totPoints+= '& ';
+  totPoints = totPoints + "Like-for-Like Color - Certified Cool Roof ";
+  }
   
-    updateWorkDesc(String(totPoints));
+
+  updateWorkDesc(String(totPoints));

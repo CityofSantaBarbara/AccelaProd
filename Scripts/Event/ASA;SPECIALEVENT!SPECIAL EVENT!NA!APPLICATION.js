@@ -11,11 +11,14 @@ updateFee('SE_001', 'SE_GENERAL', 'FINAL', 1, 'Y');
 //START COA - Add depending Custom Field Question
 
 //*************Nonprofit Organization***************
+/*
 if (AInfo["501C3"] == "Yes"
     && !appHasCondition("Special Event Requirements", null, "Proof of Non-Profit Status Required", null)) {
     addStdCondition("Special Event Requirements", "Proof of Non-Profit Status Required");
 }
+*/
 //*************Event Location - Use of City Park**********************
+/*
 if (AInfo["Alameda Park East"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: Chase Palm Park Alameda Park East", null)) {
     addStdCondition("Special Event Requirements", "Event Location: Chase Palm Park Alameda Park East");
@@ -76,7 +79,9 @@ if (AInfo["Other Park"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location:", null)) {
     addStdCondition("Special Event Requirements", "Event Location:");
 }
+*/
 //***********Event Location - Use of City Beach**********************
+/*
 if (AInfo["East Beach Cabrillo West"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: East Beach, Cabrillo West", null)) {
     addStdCondition("Special Event Requirements", "Event Location: East Beach, Cabrillo West");
@@ -89,7 +94,9 @@ if (AInfo["West Beach"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: West Beach", null)) {
     addStdCondition("Special Event Requirements", "Event Location: West Beach");
 }
+*/
 //*************Event Location - Use of City Indoor Venue**********************
+/*
 if (AInfo["Chase Palm Park Center"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: Chase Palm Park Center", null)) {
     addStdCondition("Special Event Requirements", "Event Location: Chase Palm Park Center");
@@ -114,7 +121,9 @@ if (AInfo["Mackenzie Center"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: MacKenzie Center", null)) {
     addStdCondition("Special Event Requirements", "Event Location: MacKenzie Center");
 }
+*/
 //*************Event Location - Use or Closure of City Street**********************
+/*
 if (AInfo["Use or Closure of City Street"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: City Streets", null)) {
     addStdCondition("Special Event Requirements", "Event Location: City Streets");
@@ -135,27 +144,33 @@ if (AInfo["Cycling Event"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Parade Requirements", null)) {
     addStdCondition("Special Event Requirements", "Parade Requirements");
 }
+*/
 //*************Event Location - Use or Closure of City Street**********************
+/*
 if (AInfo["Use or Closure of City Sidewalk or Bike Path"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: City Sidewalks", null)) {
     addStdCondition("Special Event Requirements", "Event Location: City Sidewalks");
 }
-/*
+
 if (AInfo["Use or Closure of City Sidewalk or Bike Path"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Traffic Plan Required - Sidewalks", null)) {
     addStdCondition("Special Event Requirements", "Traffic Plan Required - Sidewalks");
-} */
+} 
+*/
 //*************Event Location - Use or Closure of City Waterfront Bike Path**********************
+/*
 if (AInfo["Use or Closure of City Waterfront Bike Path"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Event Location: City Waterfront Bike Path", null)) {
     addStdCondition("Special Event Requirements", "Event Location: City Waterfront Bike Path");
 }
-/*
+
 if (AInfo["Use or Closure of City Waterfront Bike Path"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Traffic Plan Required - Bike Path", null)) {
     addStdCondition("Special Event Requirements", "Traffic Plan Required - Bike Path");
-} */
+}
+*/
 //*************Event Infrastructure - **********************
+/*
 if (AInfo["Stage is 24 inches high or more"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Building Permit Required - Stage", null)) {
     addStdCondition("Special Event Requirements", "Building Permit Required - Stage");
@@ -184,10 +199,10 @@ if (AInfo["Installing temporary electrical wiring for event"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Temporary Wiring/Lighting Permit required", null)) {
     addStdCondition("Special Event Requirements", "Temporary Wiring/Lighting Permit required");
 }
-/*if (AInfo["Bringing in additional Lighting"] == "CHECKED"
+if (AInfo["Bringing in additional Lighting"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Bringing in additional Lighting", null)) {
     addStdCondition("Special Event Requirements", "Bringing in additional Lighting");
-} */
+}
 if (AInfo["Requesting access to a City water hydrant"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Water Hydrant Meter Required", null)) {
     addStdCondition("Special Event Requirements", "Water Hydrant Meter Required");
@@ -248,7 +263,9 @@ if (AInfo["Requesting uniformed City police officers"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Officer Request Form Required", null)) {
     addStdCondition("Special Event Requirements", "Officer Request Form Required");
 }
+*/
 //*************Sporting Elements**********************
+/*
 if (AInfo["Event includes"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Route Requirements Walk, Run or Cycling events", null)) {
     addStdCondition("Special Event Requirements", "Route Requirements Walk, Run or Cycling events");
@@ -273,7 +290,9 @@ if (AInfo["Requesting use of City Volleyball Courts"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Volleyball Court Rental Confirmation", null)) {
     addStdCondition("Special Event Requirements", "Volleyball Court Rental Confirmation");
 }
+*/
 //*************Food Beverage Vendors**********************
+/*
 if (AInfo["Food and beverages will be made available to the public at the event"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Temporary Food Facility or Mobile Food Facility Permit required", null)) {
     addStdCondition("Special Event Requirements", "Temporary Food Facility or Mobile Food Facility Permit required");
@@ -298,7 +317,9 @@ if (AInfo["Vendors selling food and beverages in the Public Right of Way"] == "C
     && !appHasCondition("Special Event Requirements", null, "One Day Vendor License Required - Sidewalk Vending", null)) {
     addStdCondition("Special Event Requirements", "One Day Vendor License Required - Sidewalk Vending");
 }
+*/
 //*************Parking Vehicle Access**********************
+/*
 if (AInfo["Use of City Waterfront Parking Lot"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Waterfront Parking Permit Required - Vehicle Parking", null)) {
     addStdCondition("Special Event Requirements", "Waterfront Parking Permit Required - Vehicle Parking");
@@ -319,7 +340,9 @@ if (AInfo["Providing onsite Bicycle valet"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Bicycle Valet Contract", null)) {
     addStdCondition("Special Event Requirements", "Bicycle Valet Contract");
 }
+*/
 //*************Trash Recycling Cleaning**********************
+/*
 if (AInfo["Requesting to place portable toilets or trash and recycling receptacles on a City street"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Litter Free Permit Requiredt", null)) {
     addStdCondition("Special Event Requirements", "Litter Free Permit Requiredt");
@@ -332,7 +355,9 @@ if (AInfo["Hiring a Professional Cleaning Company"] == "CHECKED"
     && !appHasCondition("Special Event Requirements", null, "Professional Cleaning Contract ", null)) {
     addStdCondition("Special Event Requirements", "Professional Cleaning Contract ");
 }
+*/
 //*************For all Applications**********************
+/*
 if (!appHasCondition("Special Event Requirements", null, "Certificate of Insurance Required", null)) {
     addStdCondition("Special Event Requirements", "Certificate of Insurance Required");
 }
@@ -342,7 +367,7 @@ if (!appHasCondition("Special Event Requirements", null, "Site Map Required", nu
 if (!appHasCondition("Special Event Requirements", null, "Route Map Required", null)) {
     addStdCondition("Special Event Requirements", "Route Map Required");
 }
-/*
+
 if (!appHasCondition("Special Event Requirements", null, "Breakdown/Clean Up", null)) {
     addStdCondition("Special Event Requirements", "Breakdown/Clean Up");
 }

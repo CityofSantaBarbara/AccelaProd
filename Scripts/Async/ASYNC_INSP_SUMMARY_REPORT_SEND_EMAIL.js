@@ -6,6 +6,7 @@
     aa.print("Email: " + paEmail);
     var emailFrom = "SBCityLDT@santabarbaraca.gov";
     var emailTo = paEmail;
+    var emailCC = "";
     //var emailCC = "CDRecords@SantaBarbaraCA.gov";
     var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
     var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";

@@ -1,5 +1,6 @@
 //Added by Gray Quarter per request of Andrew on 11/2/2020 
 removeAllFees(capId);
+/*
 if (publicUser) {
   if (estValue <= 100000) {
     updateFee("BLD_ITM_0015", "BLD LINE ITEMS", "FINAL", 100, "Y");
@@ -14,3 +15,4 @@ if (publicUser) {
     updateFee("BLD_ITM_0015", "BLD LINE ITEMS", "FINAL", 1000, "Y");
   }
 }
+*/

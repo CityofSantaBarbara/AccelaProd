@@ -14,7 +14,7 @@ if (publicUser) {
 
 var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
   var toEmail = "citypermits@co.santa-barbara.ca.us";
-  var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+  var ccEmail = ""; //blank for now
   var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
   var emailParameters = aa.util.newHashtable();
 addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());

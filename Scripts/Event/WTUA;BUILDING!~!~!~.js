@@ -96,16 +96,21 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
 
+//if (!appMatch('Building/Over the Counter/*/*') && wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+ //   runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
+ // }
+/*
 if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                logDebug("County Assessor email");
 	       //Get Report and Report Parameters
               
 	        var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-                var toEmail = "citypermits@co.santa-barbara.ca.us";
-                var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
-                var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
+                 var toEmail = "citypermits@co.santa-barbara.ca.us";
+                var ccEmail = ""; //blank for now
+                //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+                var theURL = "https://landuse-dt.santabarbaraca.gov/CitizenAccessTrain";
                 var emailParameters = aa.util.newHashtable();
-		addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
+		        addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
                 addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
                 addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
 
@@ -116,6 +121,7 @@ if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
                 aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
                 logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
 }
+*/
 
 function generateReportForASyncEmail(itemCap, reportName, module, parameters) {
     //returns the report file which can be attached to an email.

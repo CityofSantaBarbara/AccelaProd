@@ -35,29 +35,27 @@ if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
       logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
   }
   /*
-  if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
-     logDebug("County Assessor email");
-  //Get Report and Report Parameters
-    
-  var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-  var toEmail = "jason@grayquarter.com";
-  var ccEmail = "jason@grayquarter.com"; //blank for now
-    //var toEmail = "citypermits@co.santa-barbara.ca.us";
-    //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
-      var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
-      var emailParameters = aa.util.newHashtable();
-  addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
-      addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
-      addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
+if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
+   logDebug("County Assessor email");
+//Get Report and Report Parameters
   
-      var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
-      var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
-      var fileNames = [];
-     
-      aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
-      logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
-  }
-  */
+    var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+    var toEmail = "citypermits@co.santa-barbara.ca.us";
+    var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+    var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
+    var emailParameters = aa.util.newHashtable();
+addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
+    addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());
+    addParameter(emailParameters, "$$acaRecordUrl$$", getACARecordURL(theURL));
+
+    var emailTemplate = "BLD_PERMIT_FINAL_INSPECTION_APP_ASSESSOR";
+    var capId4Email = aa.cap.createCapIDScriptModel(capId.getID1(), capId.getID2(), capId.getID3());
+    var fileNames = [];
+   
+    aa.document.sendEmailAndSaveAsDocument(fromEmail, toEmail, ccEmail, emailTemplate, emailParameters, capId4Email, fileNames);
+    logDebug( ": Sent Email template " + emailTemplate + " To Contacts ");
+}
+*/
   function generateReportForASyncEmail(itemCap, reportName, module, parameters) {
   //returns the report file which can be attached to an email.
   var vAltId;

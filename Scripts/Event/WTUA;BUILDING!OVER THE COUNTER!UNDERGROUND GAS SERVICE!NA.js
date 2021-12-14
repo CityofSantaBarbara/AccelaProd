@@ -1,14 +1,14 @@
-//WTUA;BUILDING!OVER THE COUNTER!WATER HEATER!NA.js
-//WTUA:BUILDING/OVER THE COUNTER/WATER HEATER/NA
+//WTUA;BUILDING!OVER THE COUNTER!UNDERGROUND GAS SERVICE!NA.js
+//WTUA:BUILDING/OVER THE COUNTER/UNDERGROUND GAS SERVICE/NA
 //Added by Gray Quarter
-//Start - New On Demand WATER HEATER record for ACA
+//Start - New On Demand UNDERGROUND GAS SERVICE record for ACA
 
 if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
   //runReportAsyncAttach(capId, "On Demand Permit Record","PermitNum",capId.getCustomID());
   runAsyncEvent("ASYNC_ONDEMAND_UNDERGROUND_GAS_SEND_EMAIL",capIDString,currentUserID);
 }
 
-//END - New On Demand WATER HEATER record for ACA
+//END - New On Demand UNDERGROUND GAS SERVICE record for ACA
 if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
   runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
 }
@@ -39,11 +39,9 @@ if (wfTask == "Inspection" && wfStatus == "Final Inspection Complete") {
    logDebug("County Assessor email");
 //Get Report and Report Parameters
   
-var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-var toEmail = "jason@grayquarter.com";
-var ccEmail = "jason@grayquarter.com"; //blank for now
-  //var toEmail = "citypermits@co.santa-barbara.ca.us";
-  //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
+    var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
+    var toEmail = "citypermits@co.santa-barbara.ca.us";
+    var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
     var theURL = "https://landuse.santabarbaraca.gov/CitizenAccess";
     var emailParameters = aa.util.newHashtable();
 addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());

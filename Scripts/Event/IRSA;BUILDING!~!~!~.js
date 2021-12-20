@@ -10,8 +10,8 @@ if (!appMatch('Building/Over the Counter/*/*')){
         || inspType == "Final Occupancy")
         && inspResult == "Passed") {
         closeTask("Inspection","Final Inspection Complete","Auto Closed by Script","Auto Closed by Script");
-        //closeTask("Close","Closed","Auto Closed by Script","Auto Closed by Script");
-        //updateAppStatus("Complete","Auto Closed by Script");
+        closeTask("Closed","Closed","Auto Closed by Script","Auto Closed by Script");
+        updateAppStatus("Complete","Auto Closed by Script");
         //runAsyncEvent("ASYNC_INSP_SUMMARY_REPORT_SEND_EMAIL",capIDString,currentUserID);
 
 

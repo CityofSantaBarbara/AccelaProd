@@ -1,3 +1,5 @@
+createConditionForPlanReview();
+
 // SAMPLE SCRIPT TO MAP GIS INFO TO AN ASI AND GET PROX ALERT!
 
 var GISService = "SANTABARBARA";

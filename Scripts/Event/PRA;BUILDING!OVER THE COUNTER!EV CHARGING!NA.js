@@ -13,11 +13,11 @@ logDebug("County Assessor permit issuance email");
 //Get Report and Report Parameters
 
 var fromEmail = lookup("SCRIPT_EMAIL_FROM", "AGENCY_FROM");
-var toEmail = "jason@grayquarter.com";
-var ccEmail = "jason@grayquarter.com"; //blank for now
+var toEmail = "citypermits@co.santa-barbara.ca.us";
+var ccEmail = ""; //blank for now
   //var toEmail = "citypermits@co.santa-barbara.ca.us";
   //var ccEmail = "CDRecords@SantaBarbaraCA.gov"; //blank for now
-  var theURL = "https://aca-NONPROD.accela.com/SANTABARBARA-NONPROD1";
+  var theURL = "https://aca-PROD.accela.com/SANTABARBARA";
   var emailParameters = aa.util.newHashtable();
 addParameter(emailParameters, "$$altID$$", cap.getCapModel().getAltID());
   addParameter(emailParameters, "$$recordAlias$$", cap.getCapType().getAlias());

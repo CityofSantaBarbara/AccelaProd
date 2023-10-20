@@ -1,5 +1,5 @@
-//ASA;BUILDING!EV CHARGING!NA!NA.js
-//Building/EV Charging/NA/NA
+//ASA;BUILDING!OVER THE COUNTER!EV CHARGING!NA.js
+//Building/OVER THE COUNTER/EV Charging/NA
 //Added by Gray Quarter
 //New On Demand EV Charging Station record for ACA
 removeAllFees(capId);

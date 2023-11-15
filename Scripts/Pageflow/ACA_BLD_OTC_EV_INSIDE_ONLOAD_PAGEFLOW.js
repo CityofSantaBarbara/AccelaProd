@@ -1,6 +1,6 @@
 /*------------------------------------------------------------------------------------------------------/
-| Program : ACA_BLD_OTC_EV_GARAGE_ONLOAD_PAGEFLOW.js
-| Event   : ACA_BLD_OTC_EV_GARAGE_ONLOAD_PAGEFLOW Event
+| Program : ACA_BLD_OTC_EV_INSIDE_ONLOAD_PAGEFLOW.js
+| Event   : ACA_BLD_OTC_EV_INSIDE_ONLOAD_PAGEFLOW Event
 |
 | Usage   : If no explanations required skip page this fires on multiple record types
 |           
@@ -84,7 +84,7 @@ loadAppSpecific4ACA(AInfo); 						// Add AppSpecific Info
 
 try {
    var hide = true;
-    if ( String(AInfo["The electric vehicle charger will be located"]).toLowerCase() == 'in the garage' )
+    if ( String(AInfo["The electric vehicle charger will be located"]).toLowerCase() == 'inside the building' )
       {
         hide = false;
         for(var x in AInfo){
@@ -102,7 +102,7 @@ try {
 
 } catch (err) {
     showDebug = true;
-    logDebug("An error has occurred in ACA_BLD_OTC_EV_GARAGE_ONLOAD_PAGEFLOW: Main function: " + err.message);
+    logDebug("An error has occurred in ACA_BLD_OTC_EV_INSIDE_ONLOAD_PAGEFLOW: Main function: " + err.message);
     logDebug(err.stack);
 }
 

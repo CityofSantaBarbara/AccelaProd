@@ -16,7 +16,7 @@ try{
     assignInspection(inspId, inspectorId);
   }
 } catch(ISAex){
-	logDebug("Error in ISA:BUILDING/*/*/* event: "+ ISAex);
+	logDebug("Error in ISA:BUILDING/*/*/* 1st try: "+ ISAex);
 	showDebug=true;
 }
 
@@ -110,24 +110,12 @@ try{
   if(publicUser && inspType != 'Final Landscape Design' || 'Rough Fire Sprinkler' || 'Fire High Fire Landscaping' || 'Fire Final') { //If scheduled via ACA and not Final Landscape Design, auto assign inspector based on GIS info
     assignInspectionBasedOnArea(incrementedInspId);
     logDebug("Public User: " + publicUser);
-    var startDate = new Date();
-      logDebug("ISA:BUILDING/*/*/* PUBLICUSER executed: "+ startDate);
-      var FROM = "SBCityLDT_Test@santabarbaraca.gov";
-          var TO = "nfolman@santabarbaraca.gov";
-          var SUBJECT = "ASA for Renewal CAPID PUBLICUSER:: " + capId + " startDate:" + startDate;
-          var BODY_TEXT = "Parent CapId: " + parentCapId + " " + debug;
-          aa.sendMail(FROM, TO, "", SUBJECT , BODY_TEXT);
+    logDebug("ISA:BUILDING/*/*/* PUBLICUSER executed: "+ debug);
   } else if (inspType != 'Final Landscape Design' || 'Rough Fire Sprinkler' || 'Fire High Fire Landscaping' || 'Fire Final') { //If scheduled via Accela Mobile app and not Final Landscape Design, assign to current user
     var inspectorId = aa.env.getValue("CurrentUserID");
     assignInspection(incrementedInspId, inspectorId);
     logDebug("Public User: " + publicUser);
-    var startDate = new Date();
-      logDebug("ISA:BUILDING/*/*/* NOT PUBLICUSER executed: "+ startDate);
-      var FROM = "SBCityLDT_Test@santabarbaraca.gov";
-          var TO = "nfolman@santabarbaraca.gov";
-          var SUBJECT = "ASA for Renewal CAPID:: " + capId + " startDate:" + startDate;
-          var BODY_TEXT = "Parent CapId: " + parentCapId + " " + debug;
-          aa.sendMail(FROM, TO, "", SUBJECT , BODY_TEXT);
+    logDebug("ISA:BUILDING/*/*/* NOT PUBLICUSER executed: "+ debug);
   }
 
   if(inspType == 'Final Landscape Design'){ //If Final Landscape Design, assign to Jasmine Showers
@@ -143,7 +131,7 @@ try{
   }
   
 } catch(err){
-  logDebug("Error in ISA event *Schedule second inspection*: "+ err + " occurred on line " + err.lineNumber);
+  logDebug("Error in ISA 2nd try: "+ err + " occurred on line " + err.lineNumber);
   showDebug=true;
   logDebug("<BR/>|****JavaScript Error: " + err.message + " occurred in line " + err.lineNumber + " of ISA:BUILDING/*/*/*.js <BR/>|****Error Stack: " + err.stack);
 

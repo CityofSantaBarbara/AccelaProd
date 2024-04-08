@@ -1,7 +1,7 @@
 //InspectionMultipleScheduleAfter is a BACK OFFICE (AA) script
 
 try{
-  if(inspType != 'Final Landscape Design' || 'Rough Fire Sprinkler' || 'Fire High Fire Landscaping' || 'Fire Final'){
+  if (inspType != 'Final Landscape Design' && inspType != 'Rough Fire Sprinkler' && inspType != 'High Fire Landscaping' && inspType != 'Fire Final'){
 	  var inspAssignArea = String(getGISInfoSB("SantaBarbara", "Building Permit Inspection Areas", "Region", "-5"));
 
 	  if (inspId && inspAssignArea.length > 0) {
@@ -68,86 +68,60 @@ function getGISInfoSB(svc,layer,attributename) {
 
 
 //Added by Nicole Folman
-
+//Schedule second inspection based on inspection type
 
 try{
+  //If inspection type is one of the following, schedule a second inspection of Erosion Control and assign it based on the GIS area
   if (inspType == 'Underground Gas Piping') {
     var rInspArr = new Array('Erosion Control [Required for UG Gas Piping]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
-  }
+  } else
   if (inspType == 'Underground Electrical') {
     var rInspArr = new Array('Erosion Control [Required for UG Electrical]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
-  }
+  } else
   if (inspType == 'Underground Plumbing') {
     var rInspArr = new Array('Erosion Control [Required for UG Plumbing]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
-  }
+  } else
   if (inspType == 'Foundation') {
     var rInspArr = new Array('Erosion Control [Required for Foundation]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
-  }
+  } else
   if (inspType == 'Reinforcement Steel') {
     var rInspArr = new Array('Erosion Control [Required for Reinforcement Steel]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
-  }
+  } else
   if (inspType == 'Rough Grading') {
     var rInspArr = new Array('Erosion Control [Required for Rough Grading]');
     addComboInspection(rInspArr);
-
     var incrementedInspId = (parseInt(inspId, 10) + 1).toString();
     assignInspectionBasedOnArea(incrementedInspId);
-
-    if(incrementedInspId){
-      var inspector = inspectorId;
-    }
   }
-
+//If inspection type is Final Landscape Design, assign to Jasmine Showers
   if(inspType == 'Final Landscape Design'){ //If Final Landscape Design, assign to Jasmine Showers
     var inspectorId = aa.person.getUser('JSHOWERS').getOutput().getUserID();
-    assignInspection(inspId, inspectorId);
+    var inspectorAssign = assignInspection(inspId, inspectorId);
+    logDebug("Final Landscape Design Inspection Scheduled: " + inspectorId);
   } else
-  
-  if(inspType == 'Rough Fire Sprinkler' || 'Fire High Fire Landscaping' || 'Fire Final'){
-    var fireInspector = aa.person.getUser('ALYNN').getOutput().getUserID();
-    assignInspection(inspId, fireInspector);
+
+//If inspection type is Rough Fire Sprinkler, Fire High Fire Landscaping, or Fire Final, assign to Alynn Lynn
+  if(inspType == 'Rough Fire Sprinkler' || inspType == 'Fire High Fire Landscaping' || inspType == 'Fire Final'){
+    var inspectorId = aa.person.getUser('ALYNN').getOutput().getUserID();
+    var inspectorAssign = assignInspection(inspId, inspectorId);
+    logDebug("Fire Inspection Scheduled to : " + inspectorId);
   }
-  
+
 }
 catch(err){
   logDebug("Error in ISA event *Schedule second inspection*: "+ err + " occurred on line " + err.lineNumber);
@@ -157,6 +131,7 @@ catch(err){
   email("nfolman@santabarbaraca.gov","SBCityLDT_Test@santabarbaraca.gov", " ", "debug from catch error in ISA:BUILDING/*/*/*.js " + capIDString + " " + debug );
 }
 
+//Function to schedule second inspection
 function addComboInspection(rInspArr) {
   for (var x in rInspArr) {
     var rInspection = rInspArr[x];
@@ -178,7 +153,7 @@ function addComboInspection(rInspArr) {
     scheduleInspectDate(rInspection, scheduledDate, rInsp, null, rCom, rPhone);
 }
 
-
+//Function to assign inspection based on GIS area for second inspection
 function assignInspectionBasedOnArea(incrementedInspId) {
   var inspAssignArea = String(getGISInfo("SantaBarbara", "Building Permit Inspection Areas", "Region", "-5"));
   
